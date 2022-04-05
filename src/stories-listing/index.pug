@@ -1,0 +1,61 @@
+extends ../_layouts/base
+
+include ../_modules/molecules/banner/banner
+include ../_modules/molecules/breadcrumbs/breadcrumbs
+include ../_modules/molecules/filters/filters
+include ../_modules/organisms/story-cards/story-cards
+
+block config
+	//- Correct base url pathing for this page
+	- var baseUrl = '../'
+	- var primaryNav = '2'
+	- var site = htmlWebpackPlugin.options
+
+block content
+
+	+banner({
+		"__image": "/assets/ecda/images/pics/banner-stories-page.jpg",
+		"__title": "Inspiring Stories",
+		"__text": "Beanstalk celebrates our early childhood teachers by sharing their stories with you. Be inspired by their passion and professionalism in supporting every child's learning and development."
+	})
+
+	+breadcrumbs({
+		"items": [
+			{
+				"link": "/",
+				"name": "Home"
+			},
+			{
+				"link": "stories-listing",
+				"name": "Inspiring Stories"
+			}
+		]
+	})
+
+	section.stories
+		+filters({
+			"filterData":	[
+					{
+						"class": "filter-personas",
+						"display": "Author type",
+						"options": ['All', 'Leaders', 'Educarers', 'Pre-School Teachers', 'Curriculum Specialists', 'Parents'],
+						"name": "persona"
+					},
+					{
+						"class": "filter-age-group",
+						"display": "Age Group",
+						"options": ['All', '0-2', '3-4', '5-6'],
+						"name": "age-group"
+					},
+					{
+						"class": "filter-theme",
+						"display": "Theme",
+						"options": ['All', 'Caring for your child', 'Child Psychology', 'Health Advice', 'Sleep patterns'],
+						"name": "theme"
+					}
+				]
+			})
+
+		.container
+			.row
+				+story-cards()

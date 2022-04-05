@@ -1,0 +1,7 @@
+{
+  "generator-yolo": {
+    "project": "beanstalk-project",
+    "author": "Marvin Jayson Baga",
+    "jsPreprocessor": "ES6(using babel)"
+  }
+}

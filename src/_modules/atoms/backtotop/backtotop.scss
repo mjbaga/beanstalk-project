@@ -1,0 +1,77 @@
+// backtotop styles
+
+
+.backtotop__container {
+	@include desktop {
+		position: absolute;
+		top: 0;
+		bottom: -50px;
+		right: 50px;
+		width: 70px;
+	}
+}
+
+.backtotop__screen {
+	z-index: 20;
+
+	@include desktop {
+		position: absolute;
+		height: 100vh;
+		max-height: 100%;
+		width: 60px;
+		top: 0;
+
+		&.is_stuck {
+			position: fixed;
+			top: auto!important;
+			bottom: 0;
+		}
+	}
+}
+
+.btn-backtotop {
+	background: $green;
+	border: 0;
+	color: #fff;
+	border-radius: 50%;
+	width: 4em;
+	height: 4em;
+	text-transform: uppercase;
+	font-weight: bold;
+	right: 20px;
+	position: fixed;
+	bottom: 55px;
+	z-index: 5;
+	text-align: center;
+	padding: 0;
+	cursor: pointer;
+	box-shadow: 0px 5px 10px 0px rgba(9, 11, 13, 0.3);
+	opacity: 0.95;
+
+	@include desktop {
+		bottom: 20px;
+		position: absolute;
+		right: 10px;
+	}
+
+	@include mobile {
+		width: 2.5em;
+		height: 2.5em;
+		span {
+			@include visuallyhidden;
+		}
+	}
+
+	@include tablet {
+		transform-origin: right bottom;
+		transform: scale(0.75);
+	}
+
+	.icon-back-to-top {
+		display: inline-block;
+
+		@include desktop {
+			display: block;
+		}
+	}
+}

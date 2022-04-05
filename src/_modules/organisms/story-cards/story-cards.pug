@@ -1,0 +1,95 @@
+include ../../molecules/img-card/img-card
+
+mixin story-cards(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	.story-cards.listing-area(data-api="/api/stories", data-next-start="10", data-template="dotStories")
+		each item, index in site.data.stories
+			if index == 0
+				.col-md-8.col-sm-12.col-xs-12
+					.story-cards__card-container
+						+img-card({
+							"__class": item.class,
+							"__title": item.title,
+							"__image": item.image,
+							"__category": item.category,
+							"__text": item.text,
+							"__storypage": 1,
+							"__profileimage": item.profileimage,
+							"__profilename": item.cite,
+							"__position": item.position,
+							"__link": item.link,
+							"__linktext": "Read More"
+						})
+			else
+				if item.type == "quote"
+					.col-md-4.col-sm-6.col-xs-12
+						.story-cards__card-container
+							+img-card({
+								"__class": item.class,
+								"__title": item.title,
+								"__image": item.image,
+								"__category": item.category,
+								"__text": item.text,
+								"__storypage": 1,
+								"__profileimage": item.profileimage,
+								"__profilename": item.cite,
+								"__position": item.position,
+								"__link": item.link,
+								"__linktext": "",
+								"__type": item.type
+							})
+				else
+					.col-md-4.col-sm-6.col-xs-12
+						.story-cards__card-container
+							+img-card({
+								"__class": item.class,
+								"__title": item.title,
+								"__image": item.image,
+								"__category": item.category,
+								"__text": item.text,
+								"__storypage": 1,
+								"__profileimage": item.profileimage,
+								"__profilename": item.cite,
+								"__position": item.position,
+								"__link": item.link,
+								"__linktext": ""
+							})
+
+	button(type="button", class="js-loadmore btn-loadmore btn btn--green") Load more
+	
+	script#dotStories(type="text/x-dot-template")
+		|{{~ it :item:index }}
+		|{{? index === 0}}
+		.col-md-8.col-sm-12.col-xs-12
+			.story-cards__card-container
+				+img-card({
+					"__class": "{{= item.class }}",
+					"__title": "{{= item.title }}",
+					"__image": "{{= item.image }}",
+					"__text": "{{= item.text }}",
+					"__storypage": 1,
+					"__profileimage": "{{= item.profileimage }}",
+					"__profilename": "{{= item.cite }}",
+					"__position": "{{= item.position }}",
+					"__link": "{{= item.link }}",
+					"__linktext": "Read More"
+				})
+		|{{??}}
+		.col-md-4.col-sm-6.col-xs-12
+			.story-cards__card-container
+				+img-card({
+					"__class": "{{= item.class }}",
+					"__title": "{{= item.title }}",
+					"__image": "{{= item.image }}",
+					"__text": "{{= item.text }}",
+					"__storypage": 1,
+					"__profileimage": "{{= item.profileimage }}",
+					"__profilename": "{{= item.cite }}",
+					"__position": "{{= item.position }}",
+					"__link": "{{= item.link }}",
+					"__linktext": ""
+				})
+		|{{?}}
+		|{{~}}

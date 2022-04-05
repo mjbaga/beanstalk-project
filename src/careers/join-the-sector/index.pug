@@ -1,0 +1,35 @@
+extends ../../_layouts/base
+
+include ../../_modules/organisms/landing-area/landing-area
+
+block config
+	- var baseUrl = '../../'
+	- var primaryNav = '1'
+	- var site = htmlWebpackPlugin.options
+
+block content
+
+	section.listing
+		+landing-area({ 
+			"__filter": false,
+			"__data": site.data.landingJoinSector,
+			"__more": "/api/listitems2",
+			"__bannertitle": "Join the Sector",
+			"__bannertext": "Do you have a passion for working with young children? Then the Early Childhood Sector may be the place for you.",
+			"__bc" : {
+				"items": [
+					{
+						"link": "/",
+						"name": "Home"
+					},
+					{
+						"link": "/careers",
+						"name": "Early Childhood Career"
+					},
+					{
+						"link": "/careers/join-the-sector",
+						"name": "Join the Sector"
+					}
+				]
+			}
+		})

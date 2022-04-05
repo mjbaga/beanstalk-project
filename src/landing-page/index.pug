@@ -1,0 +1,30 @@
+extends ../_layouts/base
+
+include ../_modules/organisms/landing-area/landing-area
+
+block config
+	- var baseUrl = '../'
+	- var primaryNav = '0'
+	- var site = htmlWebpackPlugin.options
+
+block content
+
+	section.listing
+		+landing-area({ 
+			"__filter": true,
+			"__data": site.data.landing,
+			"__more": "/api/listitems",
+			"__bannertitle": "News & Updates",
+			"__bc" : {
+				"items": [
+					{
+						"link": "/",
+						"name": "Home"
+					},
+					{
+						"link": "/landing-page",
+						"name": "News & Updates"
+					}
+				]
+			}
+		})

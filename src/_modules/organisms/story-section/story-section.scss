@@ -1,0 +1,334 @@
+// story-section styles
+
+.story-section {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	color: #fff;
+	background: $green;
+
+	@include desktop {
+		height: 600px;
+	}
+
+	@include tablet {
+		height: auto;
+	}
+
+	.story-section__stories {
+		// padding: 0 0 40px 0;
+		padding: 0px;
+		position: relative;
+
+		&.slick-initialized {
+			display: block;
+		}
+
+		.slick-prev, .slick-next {
+			top: auto;
+		    left: auto !important;
+		    right: -28px !important;
+		}
+
+		.slick-prev {
+			bottom: 250px;
+		}
+
+		.slick-next {
+			bottom: 200px;
+		}
+
+		@include desktop {
+			padding-right: 30px;
+			position: relative;
+			height: 100%;
+		}
+
+		.title {
+			@include font-size(28);
+			margin: 20px 0 5px;
+			line-height: 1.2;
+			font-weight: normal;
+
+			@include desktop {
+				@include font-size(32);
+				margin: 20px 0;
+			}
+		}
+
+		.slick-list,
+		.slick-track,
+		.slick-slide {
+			@include desktop {
+				height: 100%;
+			}
+		}
+
+		.slick-slide.slide {
+			display: block;
+		}
+
+		.slide {
+
+			display: none;
+
+			&:first-child {
+				display: block;
+			}
+
+			@include desktop {
+				height: calc(100% - 130px);
+			}
+
+			.story-section__item {
+
+				padding-bottom: 40px;
+
+				@include desktop {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					padding-bottom: 0;
+				}
+
+				blockquote:before {
+					display: none;
+
+					@include desktop {
+						display: block;
+					}
+				}
+
+			}
+		}
+	}
+
+	.story-section__featured-image {
+		position: relative;
+		width: 100%;
+
+		@include desktop {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 50%;
+			height: 100%;
+		}
+
+		.image-container {
+			height: 100%;
+		}
+
+		.slick-prev {
+			left: 10px;
+		}
+
+		.slick-next {
+			right: 10px;
+		}
+
+		.slick-prev, .slick-next {
+			// top: -50px;
+
+			@include desktop {
+				top: auto;
+		    	right: auto !important;
+		    	left: -20px !important;
+			}
+
+			@include mobile {
+				bottom: 30% !important;
+			}
+		}
+
+		.slick-prev {
+			bottom: 200px;
+
+			@include desktop {
+				bottom: 250px
+			}
+
+			@include mobile {
+				top: inherit !important;
+			}
+		}
+
+		.slick-next {
+			bottom: 200px;
+
+			@include mobile {
+				top: inherit !important;
+			}
+		}
+
+		img {
+			width: 100%;
+
+			@include desktop {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			    -webkit-transform: translateY(0);
+			    transform: translateY(0);
+			}
+		}
+	}
+
+	.slick-dots {
+		width: 100%;
+	    bottom: 40px;
+	    text-align: left;
+
+	    @include mobile {
+    	    position: relative;
+    		margin: 30px 0px 0px 0px;
+	    }
+
+	    @include desktop {
+	        left: 0;
+	        bottom: 50px;
+	        width: 90%;
+	        display: flex;
+	        flex-direction: row;
+	        flex-wrap: wrap;
+	        justify-content: space-between;
+	    }
+
+	    @include tablet {
+	    	position: relative;
+	    	margin: 30px 0px 0px 0px;
+	    	width: 60%;
+	    	bottom: 40px;
+	    }
+
+	    li {
+
+	    	&.slick-active button:before {
+				background: #fff;
+	    	}
+
+	    	button:before {
+	    		background: $grey3;
+	    	}
+
+			@include desktop {
+		    	margin: 0;
+				height: 50px;
+				width: 50px;
+				border-radius: 50%;
+				overflow: hidden;
+				box-sizing: border-box;
+				box-shadow: $boxshadow-none;
+				transition: border .25s ease-in, box-shadow .25s ease-in, background .25s ease-in;
+				border: 3px solid transparent;
+
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					top: 0;
+					background: transparent;
+					border-radius: 50%;
+					transition: background .25s ease-in;
+				}
+			}
+
+			@include desktop {
+				height: 64px;
+				width: 64px;
+			}
+
+			@include lgDesktop {
+				height: 80px;
+				width: 80px;
+			}
+			@include desktop {
+				&:hover {
+					&:before {
+						background: rgba(160,160,160,0.5);
+					}
+				}
+
+				&:hover, &.slick-active {
+					border: 3px solid #fff;
+					box-shadow: $boxshadow-darkgrey;
+					transition: border .25s ease-in, box-shadow .25s ease-in, background .25s ease-in;
+				}
+
+				a {
+
+	    			img {
+	    				// position: absolute;
+						@include objectfit;
+	    			}
+	    	    }
+			}
+
+	    }
+	}
+
+	& > .container {
+		height: 100%;
+
+		@include mobile {
+			height: auto;
+		}
+
+		@include tablet {
+			height: auto;
+		}
+
+		& > .row {
+			height: 100%;
+
+			@include mobile {
+				height: auto;
+			}
+
+			@include tablet {
+				height: auto;
+			}
+
+			& > div {
+				height: 100%;
+
+				@include mobile {
+					height: auto;
+				}
+
+				@include tablet {
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+.no-flexbox .story-section .slick-dots {
+	display: block;
+
+	li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+}
+
+.is-big .story-section {
+	height: 720px;
+
+	blockquote:before {
+		height: 60px;
+	}
+}
+
+.is-bigger .story-section {
+	height: 800px;
+
+	blockquote:before {
+		height: 75px;
+	}
+}

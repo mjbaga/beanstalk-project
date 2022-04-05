@@ -1,0 +1,27 @@
+include ../../atoms/button/button
+
+mixin carousel(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+
+	section.home-banner
+		.arrow-container
+		.home-banner__carousel
+			.image-carousel
+				each item in site.data.carousel
+					.image-container
+						img(src= item.image, alt=item.title)
+
+			.text-container
+				.text-carousel
+					each item in site.data.carousel
+						.slide
+							.banner-content
+								h2.title= item.title
+								span= item.text
+								+button({
+									"__class": "btn--green link",
+									"__link": item.link,
+									"__text": item.btntext
+								})

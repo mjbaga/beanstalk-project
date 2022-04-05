@@ -1,0 +1,17 @@
+mixin story-banner(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.__image = spec.__image || ''
+	- spec.__quote = spec.__quote || ''
+	- spec.__author = spec.__author || ''
+	- spec.__position = spec.__position || ''
+
+	.story-banner
+		.profile-image
+			img(src=spec.__image)
+		.content
+			blockquote 
+				span.text= spec.__quote
+				cite
+					span= spec.__author
+					span= spec.__position

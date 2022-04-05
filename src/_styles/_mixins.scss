@@ -1,0 +1,166 @@
+
+@mixin background-gradient($color1, $color2, $direction) {
+    background: $color2;
+    background-repeat: repeat-x;
+
+    @if $direction == vertical {
+        background: linear-gradient(to bottom, $color1 0%, $color2 100%); /* W3C Markup, IE10 Release Preview */
+    } @else if $direction == diagonal {
+        background: linear-gradient(to bottom right, $color1, $color2); /* Standard syntax (must be last) */
+    } @else if $direction == horizontal {
+        background: linear-gradient(to right, $color1, $color2); /* Standard syntax */
+    }
+}
+
+@mixin clearfix() {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after { clear: both; }
+}
+
+@mixin objectfit() {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+// Absolute Center
+@mixin absolute-center() {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+// Image Responsive
+@mixin img-responsive() {
+    display: block;
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+@mixin icomoon($glyph) {
+    @extend %icomoon;
+    content: $glyph;
+}
+
+// Generate font-size and line-height, with standard margin bottom
+@mixin font-size-with-line-height($font-size, $line-height-multiplier, $context: $base-fontsize) {
+    font-size: calc-em($font-size, $context);
+    line-height: ($base-lineheight * $line-height-multiplier * $context / $font-size);
+    margin-top: 0;
+    margin-bottom: ($base-lineheight * $context / $font-size) + em;
+}
+
+@mixin font-size($font-size) {
+	font-size: ($font-size/$base) * 1em;
+}
+
+@mixin vertical-middle() {
+    &:before {
+        content: "";
+        display: inline-block;
+        margin-left: -5px;
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+@mixin background-cover() {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@mixin visuallyhidden() {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+@mixin smMobile {
+    @media (max-width: 374px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $bpTablet - 1) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $bpTablet) and (max-width: $bpDesktop - 1) {
+        @content;
+    }
+}
+
+@mixin nonDesktop {
+    @media (max-width: $bpDesktop - 1) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $bpDesktop) {
+        @content;
+    }
+}
+
+@mixin lgDesktop {
+    @media (min-width: $bpLgDesktop) {
+        @content;
+    }
+}
+
+@mixin noHover {
+    @media (hover:none), (hover:on-demand) {
+        @content;
+    }
+}
+
+/* Functions */
+@function calc-em($target, $context: $base-fontsize) {
+    @return $target / $context * 1em;
+}
+
+@function prefix($property, $prefixes: (webkit moz o ms)) {
+    $vendor-prefixed-properties: transform background-clip background-size;
+    $result: ();
+    @each $prefix in $prefixes {
+        @if index($vendor-prefixed-properties, $property) {
+            $property: -#{$prefix}-#{$property}
+        }
+        $result: append($result, $property);
+    }
+    @return $result;
+}
+
+@function trans-prefix($transition, $prefix: moz) {
+    $prefixed: ();
+    @each $trans in $transition {
+        $prop-name: nth($trans, 1);
+        $vendor-prop-name: prefix($prop-name, $prefix);
+        $prop-vals: nth($trans, 2);
+        $prefixed: append($prefixed, ($vendor-prop-name $prop-vals), comma);
+    }
+
+    @return $prefixed;
+}

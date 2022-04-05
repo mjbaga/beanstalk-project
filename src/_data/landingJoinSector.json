@@ -1,0 +1,44 @@
+[
+	{
+		"title": "Top 5 Reasons to be an Educator",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, mollitia provident.",
+		"image": "/assets/ecda/images/pics/landing-5.jpg",
+		"link": "/careers/join-the-sector/top-5-reasons-top-be-an-educator"
+	},
+	{
+		"title": "5 things you need to know about a career in Early Childhood Education",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum unde ex tempora doloremque odio possimus.",
+		"image": "/assets/ecda/images/pics/landing-6.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Working in the Early Childhood Sector",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente assumenda ipsa aspernatur, ex!",
+		"image": "/assets/ecda/images/pics/landing-7.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Progressing from Studies to Working",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fuga eaque quos debitis illum pariatur labore.",
+		"image": "/assets/ecda/images/pics/landing-8.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Career Fair",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eligendi, ipsam excepturi enim ab?",
+		"image": "/assets/ecda/images/pics/landing-9.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "SkillsFuture Framework",
+		"text": "Voluptas aut iste distinctio molestias. Ipsum dolor sit amet, consectetur adipisicing elit.",
+		"image": "/assets/ecda/images/pics/landing-10.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "EC Student Stories",
+		"text": "Ipsum dolor sit amet, consectetur adipisicing elit. Voluptas aut iste distinctio.",
+		"image": "/assets/ecda/images/pics/landing-11.jpg",
+		"link": "/standard-page"
+	}
+]

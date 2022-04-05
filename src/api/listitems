@@ -1,0 +1,56 @@
+[
+	{
+		"title": "Become a Better Mentor",
+		"text": "In addition to providing advice, guidance and emotional support to the mentee, a mentor also",
+		"image": "/assets/ecda/images/pics/landing-1.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Keep Calm and Lead On (Leadership Tip Series)",
+		"text": "The 'Keep Calm and Lead On' newsletter series features bite-size leadership tips, and shares good",
+		"image": "/assets/ecda/images/pics/landing-2.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "ECDA Fellows Talk Series: Leadership and Mentoring",
+		"text": "In addition to providing advice, guidance and emotional support to the mentee, a mentor also",
+		"image": "/assets/ecda/images/pics/landing-3.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Mentoring Guide",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum molestias in inventore impedit, nemo quasi quaerat.",
+		"image": "/assets/ecda/images/pics/landing-4.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Quas veniam facilis et!",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate modi, inventore ipsa neque corporis delectus.",
+		"image": "/assets/ecda/images/pics/highlight-2.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Laboriosam beatae officiis",
+		"text": "Accusantium magni, vel deleniti possimus. Animi, velit ex totam consequuntur ipsum reiciendis tenetur excepturi nam veritatis.",
+		"image": "/assets/ecda/images/pics/standard-1.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Mentoring Guide",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum molestias in inventore impedit, nemo quasi quaerat.",
+		"image": "/assets/ecda/images/pics/landing-6.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Quas veniam facilis et!",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate modi, inventore ipsa neque corporis delectus.",
+		"image": "/assets/ecda/images/pics/landing-7.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Laboriosam beatae officiis",
+		"text": "Accusantium magni, vel deleniti possimus. Animi, velit ex totam consequuntur ipsum reiciendis tenetur excepturi nam veritatis.",
+		"image": "/assets/ecda/images/pics/landing-9.jpg",
+		"link": "/standard-page"
+	}
+]

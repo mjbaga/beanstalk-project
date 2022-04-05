@@ -1,0 +1,25 @@
+mixin share(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	.story-share(class=spec.__class)
+		label Share this:
+
+		//- .addthis_inline_share_toolbox
+		ul.share-icons
+			li
+				a.share-links.addthis_button_facebook(href="#")
+					i.icon-facebook-white
+					span.vh Facebook
+			li
+				a.share-links.addthis_button_twitter(href="#")
+					i.icon-twitter
+					span.vh Twitter
+			li
+				a.share-links.addthis_button_google_plusone(g:plusone:size="large", href="#")
+					i.icon-google-plus2
+					span.vh Google+
+			li
+				a.share-links.addthis_button_pinterest(href="#")
+					i.icon-pinterest
+					span.vh Pinterest

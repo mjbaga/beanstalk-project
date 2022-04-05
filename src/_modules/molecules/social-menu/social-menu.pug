@@ -1,0 +1,22 @@
+mixin social-menu(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	.global-share-widget
+		.helpdesk
+			a.ask-jamie(href="#") Ask Jamie @ ECDA
+		.sharer
+			.sharer-label
+				span Follow us
+			ul.visit.desktop-only
+				li.facebook
+					a.social-media_button_facebook(href="#")
+						i.icon.icon-facebook-white
+				li.youtube
+					a.social-media_button_youtube(href="#")
+						i.icon.icon-youtube
+				li.flickr
+					a.social-media_button_flickr(href="#")
+						i.icon.icon-flickr
+							span.path1
+							span.path2

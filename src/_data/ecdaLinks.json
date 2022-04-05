@@ -1,0 +1,22 @@
+[
+	{
+		"name": "About Us",
+		"link": "/standard-page"
+	},
+	{
+		"name": "FAQs",
+		"link": "/standard-page"
+	},
+	{
+		"name": "Contact Us",
+		"link": "/standard-page"
+	},
+	{
+		"name": "Feedback",
+		"link": "/standard-page"
+	},
+	{
+		"name": "Sitemap",
+		"link": "/sitemap"
+	}
+]

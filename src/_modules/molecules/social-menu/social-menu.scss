@@ -1,0 +1,197 @@
+// social-menu styles
+.global-share-widget {
+	position: fixed;
+	z-index: 1000;
+
+	.helpdesk {
+		display: inline-block;
+		vertical-align: bottom;
+		a {
+			display: block;
+			color: #fff;
+			text-decoration: none;
+			text-align: center;
+			font-size: calc-em(16px);
+			height: 40px;
+			line-height: 40px;
+			box-shadow: $boxshadow-grey;
+		}
+	}
+
+	.sharer {
+		position: relative;
+		background: $grey6;
+		color: #fff;
+		cursor: pointer;
+		display: none;
+
+		@include desktop {
+			display: block;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	.visit {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		height: 0px;
+		overflow: hidden;
+		transition: all .2s ease-in;
+
+		&.show-visit {
+			margin: 10px 0 0;
+			height: 100px;
+		}
+
+		a {
+			color: #fff;
+			display: block;
+			text-align: center;
+			font-size: 1.5em;
+		}
+
+		li {
+			display: block;
+			padding: 0px;
+			border-radius: 10px 0 0 10px;
+			width: 40px;
+			margin-bottom: 0px;
+			// box-shadow: $boxshadow-grey;
+		}
+
+		// .facebook {
+		// 	background: $facebook;
+		// }
+		// .youtube {
+		// 	background: $youtube;
+		// }
+		// .flickr {
+		// 	background: #fff;
+		// }
+	}
+}
+
+@include nonDesktop {
+
+	.global-share-widget {
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+
+		&:after {
+			content: '';
+			display: table;
+		}
+
+		.helpdesk {
+			// position: absolute;
+			width: 180px;
+			// right: 0;
+			// bottom: 0;
+			// float: left;
+			margin-right: -5px;
+
+			a {
+				background: $grey6;
+				border-radius: 10px 10px 0 0;
+				height: 45px;
+				line-height: 45px;
+			}
+		}
+
+		.visit {
+		display: inline-block;
+		vertical-align: bottom;
+			&:after {
+				content: '';
+				display: table;
+			}
+			li {
+				border-radius: 10px 10px 0 0;
+				display: inline-block;
+				height: 45px;
+				width: 45px;
+				padding: 10px 5px;
+				margin-bottom: 0;
+				float: left;
+				box-shadow: $boxshadow-grey;
+			}
+
+			a {
+				font-size: 1.8em;
+			}
+		}
+	}
+}
+
+@include desktop {
+
+	.global-share-widget {
+		transform: translateY(-50%);
+		right: 0;
+		top: 50%;
+
+		.sharer {
+			position: relative;
+			padding: 95px 0px 10px;
+			border-radius: 10px 0 0 10px;
+			max-height: 100%;
+
+			&:hover {
+				// .sharer-platforms { height: 130px; }
+				.sharer-label { color: #fff; }
+			}
+		}
+
+		.sharer-label {
+			transform: rotate(-90deg);
+			transform-origin: 0 0;
+			position: absolute;
+			top: 85px;
+			left: 9px;
+			width: 85px;
+			-webkit-backface-visibility: hidden;
+
+			i {
+				transform-origin: initial;
+			}
+		}
+
+		.helpdesk {
+			position: relative;
+			margin-bottom: 5px;
+			height: 175px;
+
+			a {
+				transform: rotate(-90deg);
+				transform-origin: 0 0;
+				position: absolute;
+				left: 0;
+				top: 175px;
+				background: $grey6;
+				width: 175px;
+				border-radius: 10px 0 0;
+				-webkit-backface-visibility: hidden;
+
+				&:hover { background: $grey6; }
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				width: 40px;
+				height: 52px;
+				background: transparent url('/assets/ecda/images/pics/ask-jamie.png') no-repeat 0 0;
+				position: absolute;
+				top: -45px;
+				left: 0;
+			}
+		}
+	}
+}

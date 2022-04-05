@@ -1,0 +1,24 @@
+mixin breadcrumbs(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.items = spec.items || ''
+
+	.breadcrumbs
+		.container
+			ol.breadcrumbs__list(itemscope, itemtype="http://schema.org/BreadcrumbList")
+				each item, index in spec.items
+					li.breadcrumbs__item(itemprop="itemListElement", itemscope, itemtype="http://schema.org/ListItem")
+						if index == 0
+							a.breadcrumbs__link(href=item.link, itemprop="item")
+								i.icon.icon-home
+								span(itemprop="name")= item.name
+								meta(itemprop="position", content=index)
+						else
+							if index == spec.items.length - 1
+								span.breadcrumbs__link.is-active(itemprop="item")
+									span(itemprop="name")= item.name
+									meta(itemprop="position", content=index)
+							else
+								a.breadcrumbs__link(href=item.link, itemprop="item")
+									span(itemprop="name")= item.name
+									meta(itemprop="position", content=index)

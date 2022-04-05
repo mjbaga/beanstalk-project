@@ -1,0 +1,50 @@
+[
+	{
+		"title": "Join the Sector",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, mollitia provident.",
+		"image": "/assets/ecda/images/pics/landing-3.jpg",
+		"link": "/careers/join-the-sector"
+	},
+	{
+		"title": "Progress your Career",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum unde ex tempora doloremque odio possimus.",
+		"image": "/assets/ecda/images/pics/landing-6.jpg",
+		"link": "/careers/progress-your-career"
+	},
+	{
+		"title": "Get Hired! Early Childhood Careers",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente assumenda ipsa aspernatur, ex!",
+		"image": "/assets/ecda/images/pics/landing-13.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Professional Programmes",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eligendi, ipsam excepturi enim ab?",
+		"image": "/assets/ecda/images/pics/landing-4.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Professional Development",
+		"text": "Voluptas aut iste distinctio molestias. Ipsum dolor sit amet, consectetur adipisicing elit.",
+		"image": "/assets/ecda/images/pics/landing-2.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Practitioner Inquiry (PI) Grant",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fuga eaque quos debitis illum pariatur labore.",
+		"image": "/assets/ecda/images/pics/landing-9.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Leadership Skills",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eligendi, ipsam excepturi enim ab?",
+		"image": "/assets/ecda/images/pics/landing-11.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "ECDA Fellows",
+		"text": "Voluptas aut iste distinctio molestias. Ipsum dolor sit amet, consectetur adipisicing elit.",
+		"image": "/assets/ecda/images/pics/landing-10.jpg",
+		"link": "/standard-page"
+	}
+]

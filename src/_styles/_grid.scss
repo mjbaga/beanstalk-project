@@ -1,0 +1,82 @@
+[class^="col-"], [class*=" col-"] {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 100%;
+}
+
+.row {
+	@extend %clearfix;
+	margin: 0 -10px;
+}
+
+.col--reverse {
+	float: right;
+}
+
+@media only screen and (min-width: $bpLgMobile), print {
+
+	@for $i from 1 through 12 {
+		.col-xs-#{$i} {
+			width: (100% / 12 * $i);
+		}
+
+		.offset-xs-#{$i} {
+			margin-left: (100% / 12 * $i);
+		}
+
+		.pull-xs-#{$i} {
+			margin-right: (100% / 12 * $i);
+		}
+	}
+}
+
+@media only screen and (min-width: $bpMobile), print {
+
+	@for $i from 1 through 12 {
+		.col-xs-#{$i} {
+			width: (100% / 12 * $i);
+		}
+
+		.offset-xs-#{$i} {
+			margin-left: (100% / 12 * $i);
+		}
+
+		.pull-xs-#{$i} {
+			margin-right: (100% / 12 * $i);
+		}
+	}
+}
+
+@media only screen and (min-width: $bpTablet), print {
+
+	@for $i from 1 through 12 {
+		.col-sm-#{$i} {
+			width: (100% / 12 * $i);
+		}
+
+		.offset-sm-#{$i} {
+			margin-left: (100% / 12 * $i);
+		}
+
+		.pull-sm-#{$i} {
+			margin-right: (100% / 12 * $i);
+		}
+	}
+}
+
+@media only screen and (min-width: $bpDesktop), print {
+	@for $i from 1 through 12 {
+		.col-md-#{$i} {
+			width: (100% / 12 * $i);
+		}
+
+		.offset-md-#{$i} {
+			margin-left: (100% / 12 * $i);
+		}
+
+		.pull-md-#{$i} {
+			margin-right: (100% / 12 * $i);
+		}
+	}
+}

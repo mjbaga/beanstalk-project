@@ -1,0 +1,35 @@
+extends ../../_layouts/base
+
+include ../../_modules/organisms/landing-area/landing-area
+
+block config
+	- var baseUrl = '../../'
+	- var primaryNav = '1'
+	- var site = htmlWebpackPlugin.options
+
+block content
+
+	section.listing
+		+landing-area({ 
+			"__filter": false,
+			"__data": site.data.landingProgress,
+			"__more": "/api/listitems2",
+			"__bannertitle": "Progress your Career",
+			"__bannertext": "Find out how you can take the next step and advance your career.",
+			"__bc" : {
+				"items": [
+					{
+						"link": "/",
+						"name": "Home"
+					},
+					{
+						"link": "/careers",
+						"name": "Early Childhood Career"
+					},
+					{
+						"link": "/careers/progress-your-career",
+						"name": "Progress your Career"
+					}
+				]
+			}
+		})

@@ -1,0 +1,16 @@
+extends _layouts/base
+
+include _modules/organisms/carousel/carousel
+include _modules/organisms/carousel-card/carousel-card
+include _modules/organisms/story-section/story-section
+include _modules/organisms/media-section/media-section
+
+block config
+	- var page = 'homepage'
+	- var site = htmlWebpackPlugin.options //global site data
+
+block content
+	+carousel()
+	+carousel-card()
+	+story-section()
+	+media-section()

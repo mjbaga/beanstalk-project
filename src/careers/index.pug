@@ -1,0 +1,31 @@
+extends ../_layouts/base
+
+include ../_modules/organisms/landing-area/landing-area
+
+block config
+	- var baseUrl = '../'
+	- var primaryNav = '1'
+	- var site = htmlWebpackPlugin.options
+
+block content
+
+	section.listing
+		+landing-area({ 
+			"__filter": false,
+			"__data": site.data.landingCareers,
+			"__more": "/api/listitems3",
+			"__bannertitle": "Early Childhood Career",
+			"__bannertext": "What you need to know to join the Early Childhood sector and to develop professionally within it.",
+			"__bc" : {
+				"items": [
+					{
+						"link": "/",
+						"name": "Home"
+					},
+					{
+						"link": "/careers",
+						"name": "Early Childhood Career"
+					}
+				]
+			}
+		})

@@ -1,0 +1,60 @@
+include ../../molecules/banner/banner
+include ../../molecules/breadcrumbs/breadcrumbs
+include ../../molecules/img-card/img-card
+include ../../molecules/filters/filters
+
+mixin landing-area(spec)
+	- spec.__filter = spec.__filter || false
+	- spec.__data = spec.__data || ''
+	- spec.__more = spec.__more || ''
+	- spec.__bc = spec.__bc || {}
+	- spec.__bannertitle = spec.__bannertitle || 'Leadership Skills'
+	- spec.__bannertext = spec.__bannertext || "Beanstalk celebrates our early childhood teachers by sharing their stories with you. Be inspired by their passion and professionalism in supporting every child's learning and development."
+
+	+banner({
+		"__image": "/assets/ecda/images/pics/banner-stories-page2.jpg",
+		"__title": spec.__bannertitle,
+		"__text": spec.__bannertext
+	})
+
+	+breadcrumbs(spec.__bc)
+
+	section.landing
+		if spec.__filter == true
+			+filters({
+					"single": "single",
+					"filterData": [
+						{
+							"class": "filter-year",
+							"display": "All Years",
+							"options": ["All Years", "2017", "2016", "2015", "2014", "2013", "2012"],
+							"name": "year"
+						}
+					]
+				})
+
+		.container
+			.row
+				.cards.listing-area(data-api=spec.__more, data-next-start="6", data-template="dotListItems")
+					each item in spec.__data
+						+img-card({
+							"__class": item.class,
+							"__title": item.title,
+							"__image": item.image,
+							"__link": item.link,
+							"__text": item.text
+						})
+
+				if spec.__data.length == 9
+					button(type="button", class="js-loadmore btn-loadmore btn btn--green") Load more
+
+				script#dotListItems(type="text/x-dot-template")
+					|{{~ it :item:index }}
+					+img-card({
+						"__title": "{{= item.title }}",
+						"__image": "{{= item.image }}",
+						"__link": "{{= item.link }}",
+						"__text": "{{= item.text }}",
+						"__linktext": "Read More"
+					})
+					|{{~}}

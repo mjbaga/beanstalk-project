@@ -1,0 +1,31 @@
+extends ../_layouts/base
+
+include ../_modules/organisms/landing-area/landing-area
+
+block config
+	- var baseUrl = '../'
+	- var primaryNav = '5'
+	- var site = htmlWebpackPlugin.options
+
+block content
+
+	section.listing
+		+landing-area({ 
+			"__filter": false,
+			"__data": site.data.landingParent,
+			"__more": "/api/listitems2",
+			"__bannertitle": "Parent Favourites",
+			"__bannertext": "We want to work hand in hand with parents to ensure we raise well-rounded, confident, healthy children.",
+			"__bc" : {
+				"items": [
+					{
+						"link": "/",
+						"name": "Home"
+					},
+					{
+						"link": "/parenting-favourites",
+						"name": "Parenting Favourites"
+					}
+				]
+			}
+		})

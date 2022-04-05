@@ -1,0 +1,13 @@
+// input-text styles
+
+input.text {
+	display: inline-block;
+	width: 200px;
+	padding: 10px;
+	border: 1px solid $grey3;
+	height: 40px;
+	line-height: normal;
+	border-radius: 0;
+	-webkit-appearance: none;
+	margin-right: 10px;
+}

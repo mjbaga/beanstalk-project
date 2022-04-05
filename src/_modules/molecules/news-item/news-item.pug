@@ -1,0 +1,15 @@
+mixin news-item(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.__date = spec.__date || ''
+	- spec.__title = spec.__title || ''
+	- spec.__text = spec.__text || ''
+
+
+	.news-item(class=spec.__class)
+		.heading
+			p.news-item__date= spec.__date
+			h2.news-item__title= spec.__title
+		.content
+			p.text= spec.__text
+		

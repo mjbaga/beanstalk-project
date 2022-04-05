@@ -1,0 +1,62 @@
+//- include ../../molecules/fb-feed/fb-feed
+include ../../atoms/button/button
+include ../../atoms/input-text/input-text
+
+mixin media-section(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	section.media-section
+		.media-section__title
+			h2.section-title Keep Up to Date
+		.container
+			.row
+				.col-xs-12.col-sm-5.col-md-5.fb-col
+					.fb-feed-container.feed-match
+						a.facebook__title(href="https://www.facebook.com/BeanstalkSingapore/", target="_blank")
+							i.icon.icon-facebook-white
+							span @BeanstalkSingapore
+						#facebook.fb-feed(data-fbtoken="1716052488689630|9035e15551bf5663856b3ee86916683e")
+
+				.col-xs-12.col-sm-7.col.md-7.other-col
+					.other-media.feed-match
+						.video-block
+							a.youtube__title(href="https://www.youtube.com/channel/UCJmCXKWzXPWfAjD-Wrr8-Gg", target="_blank")
+								i.icon.icon-youtube
+								span @ECDASingapore
+							a(href="", class="fancybox.iframe", data-url="https://youtu.be/S2oH6rGxIOY").video__clicker.video-youtube
+
+							p.video-title The Unsung Hero - Grace's story
+						
+						.newsletter
+							h3.title
+								i.icon-email
+								| Newsletter Sign-up
+							p Get the latest updates on events and initiatives from the ECDA.
+							.subscribe
+								+input-text({
+									"__class": "input-subscribe", 
+									"__placeholder": "Email address",
+									"_name": "subscribe"
+								})
+								+button({
+									"__type": "button",
+									"__class": "btn--white",
+									"__link": "#",
+									"__text": "Subscribe"
+								})
+			.row
+				.event-carousel
+					each item in site.data.eventCarousel
+						.slide
+							.event-carousel__item
+								.image.carousel-match
+									img(src=item.image)
+								.text.carousel-match
+									h3.item-title= item.title
+									p.item-text= item.text
+									+button({
+										"__class": "btn--green link",
+										"__link": item.link,
+										"__text": "Find Out More"
+									})

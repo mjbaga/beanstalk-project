@@ -1,0 +1,24 @@
+[
+	{
+		"title": "Support and Inspire",
+		"text": "Supporting and inspiring Singapore's Early Childhood professionals. We oversee the development of children aged 0 to 6.",
+		"image": "/assets/ecda/images/pics/Banner-04.jpg",
+		"btntext": "Find Out More",
+		"link": "#"
+	},
+	{
+		"title": "Banner 2",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, fuga, quasi? Quaerat aspernatur ratione expedita.",
+		"image": "/assets/ecda/images/pics/Banner-08.jpg",
+		"btntext": "Find Out More",
+		"link": "#"
+	},
+	{
+		"title": "Banner 3",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, fuga, quasi? Quaerat aspernatur ratione expedita.",
+		"image": "/assets/ecda/images/pics/Banner-03.jpg",
+		"btntext": "Find Out More",
+		"link": "#"
+	}
+]
+

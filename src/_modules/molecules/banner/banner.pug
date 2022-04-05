@@ -1,0 +1,16 @@
+mixin banner(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.__image = spec.__image || ''
+	- spec.__title = spec.__title || ''
+	- spec.__text = spec.__text || ''
+
+	.banner
+		.image-bg
+			img(src=spec.__image)
+		.container
+			.content
+				if spec.__title != ''
+					h1.page-title=spec.__title
+					p=spec.__text
+

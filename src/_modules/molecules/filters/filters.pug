@@ -1,0 +1,43 @@
+include ../../atoms/select-filter/select-filter
+include ../../atoms/button/button
+
+mixin filters(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.filterData = spec.filterData || ''
+	- spec.single = spec.single || ''
+
+	.filters
+		.container
+			.row
+				if spec.single == ''
+					.no-desktop
+						+button({
+							"__class": "filter-btn-mobile btn--green",
+							"__text": "Filter",
+							"__iconAfter": "icon-filter"
+						})
+
+				.filters__wrapper(class=spec.single)
+					.row
+						.col-md-1.col-sm-12.col-xs-12.filters__label
+							span Filter by:
+
+						each item in spec.filterData
+							.col-md-3.col-sm-6.col-xs-12
+								.filter
+									+select-filter({
+										'__class': item.class,
+										'__options': item.options,
+										'__display': item.display,
+										'__name': item.name
+									})
+
+						.col-md-1.col-sm-6.col-xs-12
+							.filter-btn-container
+								+button({
+									"__class": "filter-btn-go btn--green",
+									"__text": "Go",
+									"__type": "button"
+								})
+

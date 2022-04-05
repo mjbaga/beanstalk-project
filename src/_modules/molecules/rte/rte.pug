@@ -1,0 +1,9 @@
+mixin rte(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	.rte
+		if block
+			block
+		else
+			p No contents.

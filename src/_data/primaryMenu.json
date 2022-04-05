@@ -1,0 +1,194 @@
+[
+	{
+		"name": "News & Updates",
+		"link": "/landing-page",
+		"children": [
+			{
+				"name": "Latest News",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Events and Workshops",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Appreciating our Early Childhood Educators",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "ECDA Awards for Excellence",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Early Childhood Conference",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Beanstalk Photos",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Beanstalk Videos",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Beanstalk Magazine",
+				"link": "javascript:void(0)"
+			}
+		]
+	},
+	{
+		"name": "Early Childhood Career",
+		"link": "/careers",
+		"children": [
+			{
+				"name": "Join the Sector",
+				"link": "/careers/join-the-sector"
+			},
+			{
+				"name": "Progress your Career",
+				"link": "/careers/progress-your-career"
+			},
+			{
+				"name": "Get Hired! Early Childhood Careers",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Professional Programmes",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Professional Development",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Practioner Inquiry (PI) Grant",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Leadership Skills",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "ECDA Fellows",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "One@ECDA",
+				"link": "javascript:void(0)"
+			}
+		]
+	},
+	{
+		"name": "Inspiring Stories",
+		"link": "/stories-listing",
+		"children": [
+			{
+				"name": "Leaders",
+				"link": "/stories-listing/?persona=Leaders"
+			},
+			{
+				"name": "Educarers",
+				"link": "/stories-listing/?persona=Educarers"
+			},
+			{
+				"name": "Pre-School Teachers",
+				"link": "/stories-listing/?persona=Pre-School+Teachers"
+			},
+			{
+				"name": "Curriculum Specialists",
+				"link": "/stories-listing/?persona=Curriculum+Specialists"
+			},
+			{
+				"name": "Parents",
+				"link": "/stories-listing/?persona=Parents"
+			}
+		]
+	},
+	{
+		"name": "Learning Activities",
+		"link": "javascript:void(0)",
+		"children": [
+			{
+				"name": "Resource Kits",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Ideas & Resources from Community Partners",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Indoor Activity Ideas",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Outdoor Activity Ideas",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Places to Visit",
+				"link": "javascript:void(0)"
+			}
+		]
+	},
+	{
+		"name": "Resources & Research",
+		"link": "javascript:void(0)",
+		"children": [
+			{
+				"name": "Frameworks and Guides",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Curriculum & Pedagogy",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Operations & HR",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Quality Assurance: SPARK",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Research Findings",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Parent-Centre Partnerships",
+				"link": "javascript:void(0)"
+			}
+		]
+	},
+	{
+		"name": "Parent Favourites",
+		"link": "/parenting-favourites",
+		"children": [
+			{
+				"name": "Parenting Moments: by Age",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Caring for Your Child: Advice & Guidance",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Parenting Resources",
+				"link": "/parenting-favourites/parenting-resources"
+			},
+			{
+				"name": "Early Childhood Parenting Workshops",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Special Children",
+				"link": "javascript:void(0)"
+			},
+			{
+				"name": "Parenting Stories",
+				"link": "javascript:void(0)"
+			}
+		]
+	}
+]

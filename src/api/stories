@@ -1,0 +1,76 @@
+[
+	{
+		"title": "Stories from the Sector",
+		"text": "You need two qualities to start off in this role - passion and endurance. The rest you can learn on the job.",
+		"cite": "Mdm Dolly Chan",
+		"position": "Infant Educarer, ELFA Preschool @Serangoon",
+		"profileimage": "/assets/ecda/images/pics/profile-5.jpg",
+		"image": "/assets/ecda/images/pics/banner-stories-page.jpg",
+		"link": "/stories-listing/story-page",
+		"class": "big-card"
+	},
+	{
+		"title": "Man enough to teach pre-school",
+		"text": "Male early childhood educators bring on different perspectives and strenghts in their work with young children.",
+		"cite": "Mr Derek On",
+		"position": "Vice-Principal",
+		"profileimage": "/assets/ecda/images/pics/profile-1.jpg",
+		"image": "/assets/ecda/images/pics/related-3.jpg",
+		"link": "/stories-listing/story-page"
+	},
+	{
+		"title": "Reaping Rewards from a Career Switch",
+		"text": "Making the career switch to an infant educarer was the best decision ever made by Ms Ilaheenisa.",
+		"cite": "Ms Ilaheenisa",
+		"position": "Infant Educarer",
+		"profileimage": "/assets/ecda/images/pics/profile-3.jpg",
+		"image": "/assets/ecda/images/pics/related-1.jpg",
+		"link": "/stories-listing/story-page"
+	},
+	{
+		"title": "Making a difference with teamwork",
+		"text": "The role of an infant educarer is an extremely important one as provision of quality care is crucial in early years.",
+		"cite": "Ms Sabrina Wang",
+		"position": "Infant Educarer",
+		"profileimage": "/assets/ecda/images/pics/related-2-profile.jpg",
+		"image": "/assets/ecda/images/pics/related-2.jpg",
+		"link": "/stories-listing/story-page"
+	},
+	{
+		"title": "Bonding with kids - and their parents",
+		"text": "The main thing as an early childhood teacher is to know your children. Once you have built a bond with them and they trust you, things will be smoother.",
+		"cite": "Ms Jenny Chew",
+		"position": "Infant Educarer",
+		"profileimage": "/assets/ecda/images/pics/related-3-profile.jpg",
+		"image": "/assets/ecda/images/pics/related-3.jpg",
+		"link": "/stories-listing/story-page",
+		"type": "quote"
+	},
+	{
+		"title": "Reaping Rewards from a Career Switch",
+		"text": "Making the career switch to an infant educarer was the best decision ever made by Ms Ilaheenisa.",
+		"cite": "Ms Ilaheenisa",
+		"position": "Infant Educarer",
+		"profileimage": "/assets/ecda/images/pics/profile-3.jpg",
+		"image": "/assets/ecda/images/pics/related-1.jpg",
+		"link": "/stories-listing/story-page"
+	},
+	{
+		"title": "Making a difference with teamwork",
+		"text": "The role of an infant educarer is an extremely important one as provision of quality care is crucial in early years.",
+		"cite": "Ms Sabrina Wang",
+		"position": "Infant Educarer",
+		"profileimage": "/assets/ecda/images/pics/related-2-profile.jpg",
+		"image": "/assets/ecda/images/pics/related-2.jpg",
+		"link": "/stories-listing/story-page"
+	},
+	{
+		"title": "Bonding with kids - and their parents",
+		"text": "The main thing as an early childhood teacher is to know your children. Once you have built a bond with them and they trust you, things will be smoother.",
+		"cite": "Ms Jenny Chew",
+		"position": "Infant Educarer",
+		"profileimage": "/assets/ecda/images/pics/related-3-profile.jpg",
+		"image": "/assets/ecda/images/pics/related-3.jpg",
+		"link": "/stories-listing/story-page"
+	}
+]

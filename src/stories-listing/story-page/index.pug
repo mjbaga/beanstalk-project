@@ -1,0 +1,69 @@
+extends ../../_layouts/base
+
+include ../../_modules/molecules/banner/banner
+include ../../_modules/molecules/breadcrumbs/breadcrumbs
+include ../../_modules/molecules/story-banner/story-banner
+include ../../_modules/organisms/story-article/story-article
+include ../../_modules/molecules/img-card/img-card
+
+block config
+	//- Correct base url pathing for this page
+	- var baseUrl = '../../'
+	- var primaryNav = '2'
+	- var site = htmlWebpackPlugin.options
+
+block content
+
+	+banner({
+		"__image": "/assets/ecda/images/pics/banner-stories-page.jpg"
+	})
+	
+	.container
+		.inner-container
+
+			+story-banner({
+				"__image": "/assets/ecda/images/pics/profile-big.jpg",
+				"__quote": "You need two qualities to start off in this role - passion and endurance. The rest you can learn on the job.",
+				"__author": "Mdm Dolly Chan",
+				"__position": "Infant Educarer - ELFA Preschool@Serangoon"
+			})
+
+			+breadcrumbs({
+				"items": [
+					{
+						"link": "/",
+						"name": "Home"
+					},
+					{
+						"link": "/stories-listing",
+						"name": "Inspiring Stories"
+					},
+					{
+						"link": "#",
+						"name": "Dolly Chan"
+					}
+				]
+			})
+	
+			+story-article()
+		
+		.row
+			.other-stories
+				h2.section-title You may also like
+				each item, index in site.data.stories
+					if index != 0 && index < 4
+						.col-md-4.col-sm-6.col-xs-12(class=index != 1 ? 'no-mobile' : '', class=index == 3 ? 'no-tablet' : '')
+							.story-cards__card-container
+								+img-card({
+									"__class": item.class,
+									"__title": item.title,
+									"__image": item.image,
+									"__category": item.category,
+									"__text": item.text,
+									"__storypage": 1,
+									"__profileimage": item.profileimage,
+									"__profilename": item.cite,
+									"__position": item.position,
+									"__link": item.link,
+									"__linktext": ""
+								})

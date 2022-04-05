@@ -1,0 +1,69 @@
+include ../../molecules/img-card/img-card
+include ../../atoms/button/button
+
+mixin carousel-card(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	section.carousel-card
+		.carousel-card__header
+			.container
+				h2.title.section-title Highlights
+				ul.categories.desktop-only
+					li.category__item.is-active
+						a.category(href="#", data-value="pre-service-students") Pre-Service Students
+					li.category__item
+						a.category(href="#", data-value="educarers") Educarers
+					li.category__item
+						a.category(href="#", data-value="pre-school-teachers") Pre-School Teachers
+					li.category__item
+						a.category(href="#", data-value="centre-leaders") Centre Leaders
+					li.category__item
+						a.category(href="#", data-value="parents") Parents
+
+				.no-desktop
+					select.select-categories
+						option(value="pre-service-students") Pre-Service Students
+						option(value="educarers") Educarers
+						option(value="pre-school-teachers") Pre-School Teachers
+						option(value="centre-leaders") Centre Leaders
+						option(value="parents") Parents
+
+		.carousel-card__cards(data-api="/api/highlights")
+			//- .loader
+			//- 	img(src="/assets/ecda/images/design/loader.gif")
+			.container
+				.img-cards
+					each item in site.data.highlights
+						+img-card({
+							"__class": item.class,
+							"__title": item.title,
+							"__image": item.image,
+							"__category": item.category,
+							"__link": item.link,
+							"__text": item.text
+						})
+
+	script#dotHighlights(type="text/x-dot-template")
+		|{{~ it :item:index }}
+		.img-card
+			.image
+				img(src="{{= item.image }}")
+				.img-card__category
+					span {{= item.category }}
+			.content
+				.text
+					h3.img-card__title {{= item.title }}
+					span.story-text {{= item.title }}
+					.btn-container
+						+button({
+							"__class": "btn--plain link",
+							"__link": "{{= item.link }}",
+							"__text": "Read More",
+							"__iconAfter": "icon-right-arrow"
+						})
+		|{{~}}
+
+
+
+

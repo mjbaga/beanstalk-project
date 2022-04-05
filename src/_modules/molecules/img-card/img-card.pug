@@ -1,0 +1,58 @@
+include ../../atoms/button/button
+
+mixin img-card(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.__link = spec.__link || '#'
+	- spec.__category = spec.__category || ''
+	- spec.__title = spec.__title || ''
+	- spec.__text = spec.__text || ''
+	- spec.__image = spec.__image || '/assets/ecda/images/design/placeholder.jpg'
+	- spec.__storypage = spec.__storypage || 0
+	- spec.__profileimage = spec.__profileimage || ''
+	- spec.__profilename = spec.__profilename || ''
+	- spec.__position = spec.__position || ''
+	- spec.__linktext = spec.__linktext || ''
+	- spec.__type = spec.__type || ''
+
+	.img-card(class=spec.__class)
+		a(href=spec.__link)
+			.image
+				img(src=spec.__image)
+				if spec.__category
+					.img-card__category
+						span(class=spec.__class)= spec.__category
+		
+		.content
+			a(href=spec.__link)
+				.text
+					if spec.__type == "quote"
+						blockquote
+							span.story-text= spec.__text
+						h3.img-card__title= spec.__title
+					else
+						h3.img-card__title= spec.__title
+						span.story-text= spec.__text
+				if spec.__storypage
+					.btn-container.story-btn
+						.person
+							.person__image
+								img(src= spec.__profileimage)
+							.person__detail.flex-center-vertically
+								span.name= spec.__profilename
+								span.pos= spec.__position
+
+						+button({
+							"__class": "btn--plain link readmore",
+							"__link": spec.__link,
+							"__text": spec.__linktext,
+							"__iconAfter": "icon-right-arrow"
+						})
+				else
+					.btn-container
+						+button({
+							"__class": "btn--plain link readmore",
+							"__link": spec.__link,
+							"__text": "Read More",
+							"__iconAfter": "icon-right-arrow"
+					})

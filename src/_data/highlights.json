@@ -1,0 +1,23 @@
+[
+	{
+		"title": "One@ECDA",
+		"text": "An online platform for the registration and professional development of early childhood educators.",
+		"image": "/assets/ecda/images/pics/highlight-1v2.jpg",
+		"category": "Careers",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Outdoor Play and the Well-Being of Children",
+		"text": "Dr Lin An-Chi opens our eyes to how children perceive power relations in the adult world.",
+		"image": "/assets/ecda/images/pics/highlight-2.jpg",
+		"category": "Research",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Read the latest Beanstalk magazine",
+		"text": "Raising a Resilient Child - The importance of nurturing social-emotional development...",
+		"image": "/assets/ecda/images/pics/highlight-3.jpg",
+		"category": "Resources",
+		"link": "/standard-page"
+	}
+]

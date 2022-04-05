@@ -1,0 +1,16 @@
+mixin fb-feed(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.__title = spec.__title || ''
+	- spec.__text = spec.__text || ''
+	- spec.__video = spec.__video || ''
+	- spec.__date = spec.__date || ''
+
+	.fb-feed
+		h3.fb-feed__title
+			i.icon-facebook-black
+			span= spec.__title
+		p.date= spec.__date
+		.video-container
+
+		p.text= spec.__text

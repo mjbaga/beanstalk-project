@@ -1,0 +1,34 @@
+mixin nav(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.primaryNav = spec.primaryNav || -1
+	- spec.secondaryNav = spec.secondaryNav || -1
+	- spec.pageTitle = spec.pageTitle || ''
+
+	ul.lvl1.no-desktop
+		// add class "is-current" on the li on active page
+		each item, index in site.data.primaryMenu
+			li(class=(spec.primaryNav==index ? "is-current" : ""))
+				a.nav__item(href=item.link)= item.name
+				if item.children
+					ul.lvl2
+						each child, childIndex in item.children
+							li(class=(spec.primaryNav==index && spec.secondaryNav==childIndex ? "is-current" : ""))
+								a.nav__item(href=child.link)= child.name
+
+	ul.lvl1.desktop-only
+		// add class "is-current" on the li on active page
+		li
+			a.nav__item(href="/")
+				.icon.icon-home
+				span.vh Home
+		each item, index in site.data.primaryMenu
+			li(class=(spec.primaryNav==index ? "is-current" : ""))
+				a.nav__item(href=item.link)= item.name
+				if item.children
+					ul.lvl2
+						each child, childIndex in item.children
+							li(class=(spec.primaryNav==index && spec.secondaryNav==childIndex ? "is-current" : ""))
+								a.nav__item(href=child.link)= child.name
+
+

@@ -1,0 +1,26 @@
+[
+	{
+		"title": "What's Next: Educarers",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, mollitia provident.",
+		"image": "/assets/ecda/images/pics/landing-11.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "What's Next: Educators",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum unde ex tempora doloremque odio possimus.",
+		"image": "/assets/ecda/images/pics/landing-12.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "What's Next: Centre Leaders",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente assumenda ipsa aspernatur, ex!",
+		"image": "/assets/ecda/images/pics/landing-13.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "SkillsFuture Framework",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fuga eaque quos debitis illum pariatur labore.",
+		"image": "/assets/ecda/images/pics/landing-8.jpg",
+		"link": "/standard-page"
+	}
+]

@@ -1,0 +1,35 @@
+extends ../../_layouts/base
+
+include ../../_modules/organisms/landing-area/landing-area
+
+block config
+	- var baseUrl = '../../'
+	- var primaryNav = '5'
+	- var site = htmlWebpackPlugin.options
+
+block content
+
+	section.listing
+		+landing-area({ 
+			"__filter": false,
+			"__data": site.data.landingParentResources,
+			"__more": "/api/listitems2",
+			"__bannertitle": "Parent Resources",
+			"__bannertext": "Useful guides to support your child’s development.",
+			"__bc" : {
+				"items": [
+					{
+						"link": "/",
+						"name": "Home"
+					},
+					{
+						"link": "/parenting-favourites",
+						"name": "Parenting Favourites"
+					},
+					{
+						"link": "/parenting-favourites/parenting-resources",
+						"name": "Parenting Resources"
+					}
+				]
+			}
+		})

@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Parenting Moments: by age",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, mollitia provident.",
+		"image": "/assets/ecda/images/pics/landing-8.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Caring for your Child: Advice & Guidance",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum unde ex tempora doloremque odio possimus.",
+		"image": "/assets/ecda/images/pics/landing-9.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Parenting Resources",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente assumenda ipsa aspernatur, ex!",
+		"image": "/assets/ecda/images/pics/landing-13.jpg",
+		"link": "/parenting-favourites/parenting-resources"
+	},
+	{
+		"title": "Early Childhood Parenting Workshops",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fuga eaque quos debitis illum pariatur labore.",
+		"image": "/assets/ecda/images/pics/landing-6.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Special Children",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur labore.",
+		"image": "/assets/ecda/images/pics/landing-12.jpg",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Parenting Stories",
+		"text": "Lorem ipsum dolor sit amet. Itaque fuga eaque quos debitis illum pariatur labore.",
+		"image": "/assets/ecda/images/pics/landing-4.jpg",
+		"link": "/standard-page"
+	}
+]

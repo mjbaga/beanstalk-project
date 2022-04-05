@@ -1,0 +1,60 @@
+// fb-feed styles
+
+.fb-feed {
+	background: #fff;
+	padding: 0 30px 10px 0;
+	height: calc(100% - 80px);
+	overflow: auto;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 30px;
+	
+	.text {
+		margin-right: 10px;
+	}
+
+	.feed {
+		border-bottom: 1px solid $grey2;
+		padding: 15px 0 25px;
+
+		&:first-child {
+			padding-top: 5px;
+		}
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	.attachment {
+		margin: 5px 0 0.5em;
+		max-width: 100%;
+	}
+
+	.date {
+		display: block;
+		color: $grey5;
+		font-size: 0.875em;
+		font-weight: bold;
+		margin: 10px 0;
+	}
+
+	.btn {
+		font-size: 0.875em;
+		color: $green;
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+		padding: 4px 0 4px 0;
+
+		i {
+			font-size: 1em;
+		}
+	}
+
+}

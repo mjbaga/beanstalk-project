@@ -1,0 +1,43 @@
+extends ../_layouts/base
+
+block config
+	//- Correct base url pathing for this page
+	- var baseUrl = '../'
+	- var site = htmlWebpackPlugin.options
+
+block content
+
+	section.sitemap
+		.container
+			.row
+				h2.section-title Sitemap
+
+				.col-md-6.col-sm-6.col-xs-12
+					h3.sitemap-title Navigation
+
+					ul.sitemap-links
+						each item, index in site.data.primaryMenu
+							li
+								a.nav__item(href=item.link)= item.name
+								if item.children
+									ul.lvl2
+										each child, childIndex in item.children
+											li
+												a.nav__item(href=child.link)= child.name
+				.col-md-6.col-sm-6.col-xs-12
+					h3.sitemap-title Other Links
+					
+					ul.sitemap-links
+						each item in site.data.ecdaLinks
+								li
+									a(href=item.link)= item.name
+
+					h3.sitemap-title Corporate Menu
+
+					ul.sitemap-links
+						li
+							a(href="/standard-page") Privacy Statement
+						li
+							a(href="/standard-page") Terms of Use
+						li
+							a(href="/standard-page") Rate This Website

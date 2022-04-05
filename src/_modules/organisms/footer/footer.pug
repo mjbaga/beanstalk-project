@@ -1,0 +1,66 @@
+include ../../atoms/button/button
+include ../../atoms/input-text/input-text
+
+mixin footer(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	footer#footer.footer
+		.footer__main
+
+			.container
+				.row
+					.nav-links.col-xs-12.col-sm-12.col-md-4
+						ul.col-xs-7.col-sm-7.col-md-12
+							each item, index in site.data.primaryMenu
+								li.footer__nav-item
+									a.nav__item(href=item.link)= item.name
+						ul.no-desktop.col-xs-5.col-sm-5.col-md-12
+							each item in site.data.ecdaLinks
+								li
+									a.nav__item(href=item.link)= item.name
+
+					.footer__subscribe.col-xs-12.col-sm-12.col-md-4
+						h3.footer-title Subscribe to our Newsletter
+						.subscribe
+							+input-text({
+								"__class": "input-subscribe", 
+								"__placeholder": "Email address",
+								"_name": "subscribe"
+							})
+							+button({
+								"__type": "button",
+								"__class": "btn--green",
+								"__link": "#",
+								"__text": "Subscribe"
+							})
+
+					.social-media.col-xs-12.col-sm-12.col-md-3.offset-md-1
+						h3.footer-title Stay connected with us
+						ul.social-links
+							li
+								a.social-link.social-facebook
+									i.icon-facebook-white
+							li
+								a.social-link.social-youtube
+									i.icon-youtube
+							li
+								a.social-link.social-flickr
+									i.icon-flickr
+										span.path1
+										span.path2
+
+		.footer__bottom
+			.container
+				.row
+					.col-xs-12.col-sm-12.col-md-6
+						span.no-desktop &copy; 2017 Government of Singapore
+					.col-xs-12.col-sm-12.col-md-6
+						.footer__links
+							a(href="#") Privacy Statement
+							a(href="#") Terms of Use
+							a(href="#") Rate This Website
+					.col-xs-12.col-sm-12.col-md-6
+						p.last-update
+							span.desktop-only &copy; 2017 Government of Singapore
+							span Last updated: 17 July 2017

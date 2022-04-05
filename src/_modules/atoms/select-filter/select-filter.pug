@@ -1,0 +1,13 @@
+mixin select-filter(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.__options = spec.__options || {}
+	- spec.__display =  spec.__display || 'Author'
+	- spec.__name = spec.__name || ''
+
+	select.select-filter(class=spec.__class, name=spec.__name)
+		each opt, index in spec.__options
+			if index == 0
+				option(data-display=spec.__display)= opt
+			else
+				option= opt

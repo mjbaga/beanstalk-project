@@ -1,0 +1,47 @@
+// Breakpoints
+$bpMobile: 320px;
+$bpLgMobile: 480px;
+$bpTablet: 768px;
+$bpDesktop: 1024px;
+$bpLgDesktop: 1280px;
+
+// Fonts
+$base: 16;
+$thin: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$ultra-bold: 900;
+
+$primaryfont: 'Nunito', sans-serif;
+$secondaryfont: 'Montserrat', sans-serif;
+$base-fontsize: 16px;
+
+// Colors
+$bodycolor: #ebebeb;
+$bodyfont: #666;
+
+$grey1: #efefef;
+$grey2: #ddd;
+$grey3: #aaa;
+$grey4: #999;
+$grey5: #6d6c6c;
+$grey6: #404042;
+
+$maroon: #ce004a;
+$orange: #f9a132;
+$blue: #009deb;
+$green: #539130;
+$green2: #4d7935;
+
+$text: #404041;
+$highlight: #f1f4fb;
+
+$facebook: #3a5897;
+$youtube: #d32328;
+
+$boxshadow-none: 0 0 0 rgba(0,0,0,0);
+$boxshadow-grey: 0 0 10px 2px rgba(0,0,0,0.1);
+$boxshadow-darkgrey: 0 0 15px 2px rgba(0,0,0,0.50);
+$boxshadow-up: 0 10px 20px -1px rgba(0,0,0,0.1);

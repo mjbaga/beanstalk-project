@@ -1,0 +1,52 @@
+// rte styles
+
+.rte {
+
+	font-size: (16 / $base) * 1em;
+
+	p {
+		line-height: (24 / $base) * 1em;
+	}
+
+	a:not(.btn, .share-links, .tags) {
+		text-decoration: underline;
+		color: $green;
+	}
+
+	a.btn {
+		padding: 12px 30px;
+		display: inline-block;
+		margin: 20px 0;
+		color: #fff;
+		cursor: pointer;
+		position: relative;
+		overflow: visible;
+		line-height: 1;
+		font-weight: normal;
+		-webkit-appearance: none;
+		background: none;
+		border: 0;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $primaryfont;
+		background: $green;
+		transition: background .25s ease-in;
+
+		&:hover {
+			background: $green2;
+			transition: background .25s ease-in;
+		}
+
+	}
+
+	.image-container {
+		margin-bottom: 10px;
+	}
+
+	.video-container {
+		width: 100%;
+		margin: 40px 0;
+		text-align: center;
+	}
+
+}

@@ -1,0 +1,64 @@
+%clearfix {
+	@include clearfix;
+}
+
+.clearfix {
+	@extend %clearfix;
+}
+
+%background-cover {
+	@include background-cover;
+}
+
+%visuallyhidden {
+  @include visuallyhidden;
+}
+
+.visuallyhidden {
+	@extend %visuallyhidden;
+}
+
+.vh {
+	@extend %visuallyhidden;
+}
+
+.mobile-only,
+.no-desktop {
+	@include desktop {
+		display: none!important;
+	}
+}
+
+.mobile-only {
+	@include tablet {
+		display: none!important;
+	}
+	@include desktop {
+		display: none!important;
+	}
+}
+
+.no-tablet {
+	@include tablet {
+		display: none!important;
+	}
+}
+
+.no-mobile {
+	@include mobile {
+		display: none!important;
+	}
+}
+
+.desktop-only {
+	@include mobile {
+		display: none!important;
+	}
+	@include tablet {
+		display: none!important;
+	}
+}
+
+.align-right {
+	text-align: right;
+}

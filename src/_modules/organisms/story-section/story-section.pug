@@ -1,0 +1,33 @@
+include ../../atoms/button/button
+
+mixin story-section(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	
+	section.story-section
+		.story-section__featured-image
+			each item in site.data.stories
+				.image-container
+					img(src= item.image, alt=item.title)
+		.container
+			.row
+				.col-md-6.col-sm-12.col-xs-12
+					.story-section__stories
+						each item, index in site.data.stories
+							if index < 5
+								.slide(data-thumb=item.profileimage)
+									.story-section__item
+										h2.title= item.title
+										blockquote
+											span.text= item.text
+											cite
+												span= item.cite
+												span= item.position
+
+										+button({
+											"__class": "btn--white link",
+											"__link": item.link,
+											"__text": "Read More"
+										})
+
+			

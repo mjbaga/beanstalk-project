@@ -1,0 +1,23 @@
+[
+	{
+		"title": "Planning Fun Activities for Infants & Toddlers",
+		"text": "Opportunities to play outdoors in safe environments is necessary for children's well-being.",
+		"image": "/assets/ecda/images/pics/highlight-3.jpg",
+		"category": "Activities",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Language Development and the Environment",
+		"text": "Dr Lin An-Chi opens our eyes to how children perceive power relations in the adult world.",
+		"image": "/assets/ecda/images/pics/highlight-1.jpg",
+		"category": "Research",
+		"link": "/standard-page"
+	},
+	{
+		"title": "Early Years Development Framework",
+		"text": "Raising a Resilient Child - The importance of nurturing social-emotional development...",
+		"image": "/assets/ecda/images/pics/highlight-2.jpg",
+		"category": "Resources",
+		"link": "/standard-page"
+	}
+]

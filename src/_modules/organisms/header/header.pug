@@ -1,0 +1,98 @@
+
+include ../../molecules/nav/nav
+
+mixin header(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.primaryNav = spec.primaryNav || -1
+	- spec.secondaryNav = spec.secondaryNav || -1
+
+	header#header.header
+		.header__main
+			.container
+				.logo-container
+					a.logo(href="/")
+						img(src="/assets/ecda/images/design/beanstalk-logo.png", alt="Beanstalk")
+						//- img(src="/assets/ecda/images/design/ecda-logo.png", alt="ECDA")
+					a.logo(href="https://www.ecda.gov.sg")
+						img(src="/assets/ecda/images/design/ecda-logo.png", alt="ECDA")
+
+				.header__gov.desktop-only
+					a.gov-logo(href="https://www.gov.sg/")
+						span.visuallyhidden Singapore Government
+						img(src="/assets/ecda/images/design/sggov.png", alt="Singapore Government")
+					ul.gov-links
+						each item in site.data.ecdaLinks
+							li
+								a.nav__item(href=item.link)= item.name
+					.header__search-bar
+						label.visuallyhidden(for="siteSearch") Search
+						input#siteSearch(type="text", placeholder="Search", name="q")
+						button.btn-search(type="submit")
+							span.visuallyhidden Submit search
+							i.icon-search
+						
+					.font-resizer
+						button.js-resizer(data-size="normal").is-active
+							span.visuallyhidden Normal Font Size
+							i.icon.icon-text-resize
+						button.js-resizer(data-size="big")
+							span.visuallyhidden Big Font Size
+							i.icon.icon-text-resize
+						button.js-resizer(data-size="bigger")
+							span.visuallyhidden Bigger Font Size
+							i.icon.icon-text-resize
+						.circle 2
+						button.btn-notification.js-notification(type="button")
+							span.visuallyhidden Open notification
+							i.icon.icon-notification
+		.nav
+			.container.container--for-nav
+				.no-desktop
+					button.mobile-menu.js-mobile-menu
+						span.visuallyhidden Toggle mobile menu
+						span.line
+						span.line
+						span.line
+						span.line
+					.notication-container
+						.circle 2
+						button.btn-notification.js-notification(type="button")
+							span.visuallyhidden Open notification
+							i.icon.icon-notification
+				.nav-container
+					.no-desktop
+						.header__search-bar
+							label.visuallyhidden(for="siteSearch") Search
+							input#siteSearch(type="text", placeholder="Search", name="q")
+							button.btn-search(type="submit")
+								span.visuallyhidden Submit search
+								i.icon-search
+					+nav({"primaryNav": spec.primaryNav, "secondaryNav": spec.secondaryNav})
+					.no-desktop
+						ul.nav-gov-links
+							each item in site.data.ecdaLinks
+								li
+									a.nav-gov-links__item(href=item.link)= item.name
+					.no-desktop
+						.social-media
+							h3.social-label Stay connected with us
+							ul.social-links
+								li
+									a.social-link.social-facebook
+										i.icon-facebook-white
+								li
+									a.social-link.social-youtube
+										i.icon-youtube
+								li
+									a.social-link.social-flickr
+										i.icon-flickr
+											span.path1
+											span.path2
+			
+			.notification-bar
+				.container
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus risus vitae placerat venenatis.
+					button.js-close-notification(type="button")
+						span.visuallyhidden Close notification
+						i.icon.icon-close

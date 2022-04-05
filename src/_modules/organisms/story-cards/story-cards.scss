@@ -1,0 +1,192 @@
+// story-cards styles
+
+.story-cards {
+	margin: 30px 0 20px;
+
+	@include clearfix;
+
+	.img-card {
+		max-width: 100%;
+		width: 100%;
+		overflow: hidden;
+		margin: 0 0 20px;
+
+		h3 {
+			margin-top: 0;
+		}
+
+		.image {
+
+			&:after {
+				padding-top: 66.7%;
+			}
+		}
+
+		.swap-text {
+			display: none;
+		}
+
+		.content {
+			padding: 25px 25px 100px;
+		}
+	}
+
+	.img-card.quote-card {
+		background: $green;
+
+		.image {
+			display: none;
+		}
+
+		.content {
+			padding: 25px;
+			color: #fff;
+			background: transparent;
+
+			blockquote {
+				quotes: "\201C""\201D""\2018""\2019";
+				margin: 10px 0 20px;
+				@extend .icon-quote;
+
+				.story-text {
+					font-weight: bold;
+					@include font-size(22);
+					font-style: italic;
+
+					@include mobile {
+						@include font-size(18);
+					}
+				}
+				
+				&:before {
+					@extend [class^="icon-"];
+					display: block;
+					height: 48px;
+					line-height: 1em;
+					margin-right: 0.25em;
+					// vertical-align: -0.4em;
+				}
+			}
+
+			.img-card__title {
+				font-weight: normal;
+				font-size: 1em;
+			}
+
+			.person__image {
+				border: 3px solid #fff;
+				box-shadow: $boxshadow-grey;
+			}
+
+			.btn--plain {
+				color: #fff;
+
+				&:hover,
+				&:focus {
+					color: #fff;
+				}
+			}
+		}
+
+		
+	}
+
+	.img-card.big-card {
+		.image:after {
+			padding-top: 62.5%;
+
+			@include mobile {
+				padding-top: 75%;
+			}
+		}
+		.content {
+			position: absolute;
+			bottom: 0;
+			padding: 25px 25px 100px;
+			color: #fff;
+			width: 100%;
+			background: transparent;
+
+			.text:before {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				min-height: 300px;
+				@include background-gradient(rgba(38, 44, 60, 0), rgba(38, 44, 60, 1), vertical);
+
+				@include mobile {
+					min-height: auto;
+					height: 100%;
+				}
+			}
+
+			.story-btn {
+				left: 25px;
+			}
+			
+
+			.img-card__title {
+				font-size: 2em;
+				margin: 0;
+				font-weight: normal;
+				position: relative;
+				z-index: 2;
+
+				@include mobile {
+					font-size: 1.5em;
+				}
+			}
+
+			.story-text {
+				display: none;
+			}
+			
+			.person__image {
+				border: 3px solid #fff;
+				box-shadow: $boxshadow-grey;
+			}
+
+			.btn--plain {
+				width: auto;
+				color: #fff;
+				right: 20px;
+			}
+		}
+	}
+	
+
+
+	
+}
+
+.no-flexbox {
+	.img-card.big-card .content:before {
+		background: none;
+	}
+}
+
+.btn-loadmore {
+	width: 90%;
+	display: block;
+	margin: 10px auto 50px;
+	max-width: 400px;
+}
+
+.cards {
+	margin: 30px 0;
+}
+
+.is-big .story-cards .img-card.quote-card .content blockquote:before {
+	height: 60px;
+}
+
+.is-bigger .story-cards .img-card.quote-card .content {
+	padding: 25px 25px 120px;
+
+	blockquote:before {
+		height: 75px;
+	}
+}

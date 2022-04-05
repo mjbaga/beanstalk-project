@@ -1,0 +1,136 @@
+// filters styles
+
+.filters {
+
+	width: 100%;
+
+	@include desktop {
+		background: transparent;
+		padding-bottom: 0;
+	}
+
+	.container {
+
+		@include desktop {
+			padding: 0 30px;
+		}
+
+		.filters__label {
+			margin: 10px 0;
+
+			span {
+				display: inline-block;
+			    vertical-align: middle;
+				font-weight: $bold;
+			}
+		}
+
+		.nice-select {
+			// padding-left: 10px;
+			font-size: 1em;
+			width: 100%;
+			margin-bottom: 10px;
+			border-bottom: none;
+			background: #fff;
+			-webkit-transition: all 0.15s ease-in-out;
+
+			&.open {
+				box-shadow: $boxshadow-grey;
+			}
+
+			&:before {
+				display: block;
+			    content: '';
+			    border-right: 1px solid #e2e2e2;
+			    height: 100%;
+			    position: absolute;
+			    top: 0px;
+			    right: 0px;
+			    margin-right: 45px;
+			}
+
+			&:after {
+				top: 4px;
+			    right: 0px;
+			    width: 45px;
+			    text-align: center;
+
+			    @include desktop {
+			    	top: 10px;
+			    }
+			}
+
+			@include desktop {
+				// width: 80%;
+				// margin-bottom: 0;
+				// display: block;
+				width: 100%;
+				margin-bottom: 0;
+				display: block;
+				height: 50px;
+				padding: 5px 45px 5px 20px;
+			}
+
+			.current {
+				text-align: left;
+			}
+		}
+
+		.filter-btn-mobile {
+			width: calc(100% + 20px);
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		.filters__wrapper:not(.single) {
+			display: block;
+			background: #dadada;
+			padding: 20px 40px;
+
+			@include mobile {
+				display: none;
+				position: absolute;
+				z-index: 5;
+				background: #fff;
+				box-shadow: $boxshadow-up;
+				padding: 20px;
+				left: -10px;
+				right: 0;
+			}
+
+			// @include tablet {
+			// 	margin: 0px -20px;
+			// }
+		}
+
+		.filters__wrapper.single {
+			display: block;
+			padding-top: 10px;
+		}
+
+		.filter-btn-container {
+			margin-top: 10px;
+			text-align: center;
+
+			@include tablet {
+				margin-top: 0px;
+			}
+
+			@include desktop {
+				margin-top: 0;
+				text-align: left;
+			}
+
+			.filter-btn-go {
+				width: 100%;
+
+				@include desktop {
+					width: 100px;
+					height: 50px;
+				}
+			}
+		}
+
+		@include clearfix;
+	}
+}

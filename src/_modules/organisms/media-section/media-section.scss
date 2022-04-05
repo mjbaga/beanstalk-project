@@ -1,0 +1,451 @@
+// media-section styles
+
+.media-section {
+	background: $bodycolor;
+
+	@include desktop {
+		padding: 60px 0;
+	}
+	
+	.container {
+		padding: 0;
+
+		.row {
+			margin: 0;
+
+			[class^="col-"], [class*=" col-"] {
+				padding-left: 0;
+				padding-right: 0;
+
+				@include desktop {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+
+				@include tablet {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+			}
+
+			.other-col {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.fb-col {
+				padding-left: 20px;
+				padding-right: 20px;
+
+				@include tablet {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+
+				@include desktop {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+
+		@include desktop {
+			padding: 0 20px;
+		}
+	}
+
+	.media-section__title {
+		background: $bodycolor;
+		margin: 10px 0;
+	}
+
+	.fb-feed-container {
+		background: #fff;
+		padding: 30px;
+		position: relative;
+		margin-bottom: 20px;
+
+		@include mobile {
+			max-height: 500px;
+		}
+		
+		.icon-facebook-white {
+			color: #fff;
+			padding: 4px 4px 0 0;
+			background: $facebook;
+		}
+	}
+
+}
+
+.facebook__title,
+.youtube__title {
+	margin: 0 0 20px;
+	display: block;
+
+	i,
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	i {
+		margin-right: 15px;
+		font-size: 1.1em;
+	}
+
+	span {
+		max-width: calc(100% - 40px);
+		@include font-size(20);
+		font-weight: bold;
+		color: $grey6;
+	}
+
+}
+
+.other-media {
+	background: $green;
+	margin: 0;
+
+	@include desktop {
+		background: transparent;
+		padding-left: 20px;
+		padding-right: 0;
+	}
+
+	.youtube__title {
+		padding: 25px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 3;
+
+		.icon {
+			font-size: 2em;
+		}
+
+		span {
+			color: #fff;
+		}
+	}
+
+	.video__clicker {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 2;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		
+		&:before {
+			position:absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			content: "\e90e";
+			font-size: 100px;
+			color: #fff;
+			opacity: .8;
+			text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+			font-family: 'icomoon' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+	}
+
+	.video-block {
+		background-color: #000;
+		// background: url('/assets/ecda/images/pics/youtube-video.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin-bottom: 20px;
+		position: relative;
+		height: 300px;
+		color: #fff;
+		cursor: pointer;
+
+		iframe {
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+		}
+
+		@include desktop {
+			height: 450px;
+		}
+
+		.video-title {
+			position: absolute;
+			width: 100%;
+			display: block;
+			background: rgba(31,39,60,0.9);
+			bottom: 0;
+			margin: 0;
+			padding: 20px 0 20px 30px;
+			@include font-size(20);
+			z-index: 4;
+		}
+
+		&:hover:before {
+		    color: #eee;
+		}
+
+		video {
+			width: 100%;
+		}
+	}
+	
+	.newsletter {
+		background: $green;
+		color: #fff;
+		padding: 30px 40px;
+
+		.title {
+			margin-top: 0;
+			@include font-size(20);
+			line-height: 1.2em;
+
+			.icon-email {
+				margin-right: 20px;
+				font-size: 1.3em;
+				vertical-align: sub;
+			}
+
+		}
+
+		.subscribe {
+
+			.input-subscribe {
+				background: $green2;
+				border: 0;
+				color: #fff;
+				margin: 10px 20px 10px 0;
+
+				&::-webkit-input-placeholder { /* Chrome */
+					color: #fff;
+				}
+
+				&:-ms-input-placeholder { /* IE 10+ */
+					color: #fff;
+				}
+				
+				&::-moz-placeholder { /* Firefox 19+ */
+					color: #fff;
+					opacity: 1;
+				}
+
+				&:-moz-placeholder { /* Firefox 4 - 18 */
+					color: #fff;
+					opacity: 1;
+				}
+			}
+
+			.btn {
+				margin: 10px 0;
+			}
+		}
+		
+	}
+}
+
+.other-stories {
+
+	.other-media {
+		padding-left: 0;
+
+		.newsletter {
+			padding: 20px;
+
+			.subscribe {
+				display: block;
+
+				button {
+					display: block;
+					width: 100%;
+				}
+
+				.input-subscribe {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.event-carousel {
+
+	@include desktop {
+		margin-top: 40px;
+	}
+
+	.slick-slide.slide {
+		display: block;
+	}
+
+	.slide {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
+	}
+
+	.event-carousel__item {
+		position: relative;
+		background: $bodycolor;
+		overflow: hidden;
+
+		@include desktop {
+			background: #fff;
+		}
+
+		.image {
+			position: relative;
+			width: 100%;
+			height: 300px;
+
+			@include desktop {
+				position: absolute;
+				width: 65%;
+				right: 0;
+				top: 0;
+			}
+
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				@include objectfit;
+			}
+		}
+
+		.text {
+			padding: 30px 30px 60px;
+
+			@include desktop {
+				padding: 30px 30px 100px;
+			}
+			
+
+			h3 {
+				color: $text;
+			}
+		
+			@include desktop {
+				width: 35%;
+			}
+		}
+	}
+
+	.slick-prev {
+		left: 10px;
+		top: 150px;
+
+		@include desktop {
+			left: 36% !important;
+			top: 50% !important;
+		}
+	}
+
+	.slick-next {
+	    right: 5px;
+	    top: 150px;
+
+	    @include desktop {
+	    	right: 10px !important;
+	    	top: 50% !important;
+	    }
+	}
+
+	.slick-arrow {
+		color: #fff;
+		background: $grey4;
+		opacity: 0.8;
+		display: block;
+	}
+
+	.slick-dots {
+		width: auto;
+		left: 20px;
+		bottom: 25px;
+
+		@include desktop {
+			left: 30px;
+			bottom: 50px;
+		}
+
+		li {
+			button:before {
+				background: $grey3;
+			}
+
+			&.slick-active button:before {
+			    background: $green;
+			}
+		}
+	}
+}
+
+.subscribe {
+	@include desktop {
+		display: flex;
+	}
+
+	.input-subscribe {
+		width: 100%;
+
+		@include desktop {
+			width: auto;
+			flex-grow: 4;
+			margin-right: 20px;
+		}
+	}
+
+	.btn {
+		width: 100%;
+
+		@include desktop {
+			width: auto;
+			flex-grow: 1;
+		}
+	}
+}
+
+.no-flexbox .newsletter .subscribe {
+	display: block;
+
+	.input-subscribe {
+		display: inline-block;
+		width: 65%;
+	}
+
+	.btn--white {
+		display: inline-block;
+		width: 30%;
+	}
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 3px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}

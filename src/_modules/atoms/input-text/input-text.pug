@@ -1,0 +1,7 @@
+mixin input-text(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.__placeholder = spec.__placeholder || ''
+	- spec.__name = spec.__name || ''
+
+	input.text(type="text", class=spec.__class, placeholder=spec.__placeholder, name=spec.__name)

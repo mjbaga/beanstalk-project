@@ -1,0 +1,63 @@
+
+.nice-select {
+	border-radius: 0;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 3px solid $green;
+	background: transparent;
+
+	.current {
+		color: $green;
+		font-weight: bold;
+	}
+
+	.list {
+		border-radius: 0;
+		width: 100%;
+		box-shadow: $boxshadow-grey;
+		
+		li {
+			border-bottom: 1px solid $highlight;
+		}
+	}
+
+	.option {
+		color: $bodyfont;
+		line-height: 45px;
+		min-height: 45px;
+		font-size: 1em;
+
+		&.focus, &.selected.focus {
+			background: $highlight;
+		}
+		
+		&:hover {
+			background: $highlight;
+		}
+	}
+
+	&:active, .open, &:focus, &:hover {
+		border-color: $green;
+	}
+
+	&:after {
+		border-bottom: 0;
+		border-right: 0;
+		font-family: 'icomoon' !important;
+		content: "\e903";
+		transform-origin: 50% 50% 0;
+		transform: none;
+		-webkit-transition: all 0.15s ease-in-out;
+		right: 15px;
+		top: 5px;
+		color: $green;
+		font-size: 1.1em;
+		height: 38px;
+		width: 15px;
+	}
+
+	&.open:after {
+		transform: rotate(-180deg);
+	}
+}

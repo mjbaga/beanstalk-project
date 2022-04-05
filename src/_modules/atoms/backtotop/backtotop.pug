@@ -1,0 +1,10 @@
+mixin backtotop(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	.backtotop__container
+		.backtotop__screen
+			button(type="button").js-backtotop.btn-backtotop
+				i.icon-back-to-top
+				span.vh Back to
+				span.vh Top
